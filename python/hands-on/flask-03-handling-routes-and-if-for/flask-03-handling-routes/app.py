@@ -22,7 +22,37 @@ def hello():
 def admin():
     return redirect(url_for("error"))
 
+@app.route("/<name>")
+def greet(name):
+    greet_format = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting page</title>
+<head>
+<body>
+    <h1>Hello, {name}!</h1>
+    <h1>Welcome to my Greeting Page</h1>
+</body>
+</html>
+    """     
+    return greet_format
 
+@app.route("/greet_admin")
+def greet_admin():
+    return redirect(url_for("greet", name = "Master Admin!!"))
+
+@app.route("/<sam>")
+def greeting(sam):
+    return render_template("greet.html", name = sam )
+
+@app.route("/list10")
+def list10():
+    return render_template("list10.html")
+
+@app.route("/evens")
+def evens():
+    return render_template("evens.html")
 
 
 if __name__== "__main__":
