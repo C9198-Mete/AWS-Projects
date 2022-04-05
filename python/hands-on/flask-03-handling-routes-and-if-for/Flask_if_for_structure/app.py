@@ -4,10 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def head():
-    first = "Bu benim ilk condition tecrubem"
+    first = "This is my first condition"
     return render_template("index.html", message = first)
-
-
 
 
 
