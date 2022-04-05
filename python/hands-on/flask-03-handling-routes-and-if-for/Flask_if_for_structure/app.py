@@ -8,9 +8,10 @@ def head():
     return render_template("index.html", message = first)
 
 
-
-
-
+@app.route("/matt")
+def mylist():
+    names = ["Sam","Fox", "Naomi"]
+    return render_template("body.html", object = names )
 
 
 
