@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Create a function named `index` which uses template file named `index.html` 
-# sent three numbers as template variable to the app.py and assign route of no path ('/') 
+# sent three numbers as template variable to  app.py and assign route of no path ('/') 
 @app.route("/")
 def index():
     return render_template("index.html")
