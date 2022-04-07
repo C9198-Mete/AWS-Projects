@@ -17,7 +17,7 @@ def lcm(num1, num2):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", methods = ["GET"])
 
 # calculate sum of them using "lcm" function, then sent the result to the 
 # "result.hmtl" file and assign route of path ('/calc'). 
