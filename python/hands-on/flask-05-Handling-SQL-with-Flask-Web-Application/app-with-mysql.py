@@ -19,7 +19,7 @@ cursor = connection.cursor()
 
 # Create users table within MySQL db and populate with sample data
 # Execute the code below only once.
-# Write sql code for initializing users table..
+# Write sql code for initializing users table.
 drop_table = 'DROP TABLE IF EXISTS users;'
 users_table = """
 CREATE TABLE users (
